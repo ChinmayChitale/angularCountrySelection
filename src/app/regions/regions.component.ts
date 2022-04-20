@@ -37,9 +37,10 @@ export class RegionsComponent implements OnInit {
    
     // Subscription to api service commented out as the api call is not fetching response as it is getting timed out 
 
-/*     this.apiService.getEuropeCountries().subscribe((res)=>{
-      console.log(res);
-    }); */
+    //  this.apiService.getEuropeCountries().subscribe((res)=>{
+    //   console.log(res);
+    //   this.countryList = res;
+    // }); 
 
     //Local mock response to service call 
 
@@ -50,9 +51,10 @@ export class RegionsComponent implements OnInit {
     
     // Subscription to api service commented out as the api call is not fetching response as it is getting timed out 
 
-/*     this.apiService.getAsiaCountries().subscribe((res)=>{
-      console.log(res);
-    }); */
+    //  this.apiService.getAsiaCountries().subscribe((res)=>{
+    //   console.log(res);
+    //   this.countryList = res;
+    // });
 
     //Local mock response to service call 
 
