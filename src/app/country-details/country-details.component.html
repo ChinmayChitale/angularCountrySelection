@@ -1,0 +1,23 @@
+
+<div class="container">
+  <label>Select Country</label>
+    <div class="wrapper">
+        <app-custom-dropdown-list [regionList]="countryList" [(currentSelection)]="currentSelection"></app-custom-dropdown-list>
+    </div>
+    <table class="table table-bordered" *ngIf="currentSelection == 1 || currentSelection == 2 || currentSelection == 3 || currentSelection == 4 || currentSelection == 5 || currentSelection == 6">
+        <tr>
+          <th colspan="2">Name</th>
+          <th>Captial</th>
+          <th colspan="2">Population</th>
+          <th>Currency</th>
+          <th>Flag</th>
+        </tr>
+        <tr>
+          <td colspan="2">{{countryData.name}}</td>
+          <td>{{countryData.capital}}</td>
+          <td colspan="2">{{countryData.population}}</td>
+          <td>{{countryData.currency}}</td>
+          <td><img width="100" alt="Image not found" [src]="countryData.flag" /></td>
+        </tr>
+      </table>
+</div>

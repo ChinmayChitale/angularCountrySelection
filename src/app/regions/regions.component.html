@@ -1,0 +1,11 @@
+<p>Regions List and Country Data In Table </p>
+<div class="container">
+	<label>Select Region</label>
+	<div class="wrapper">
+		<app-custom-dropdown-list [regionList]="regionList" [(currentSelection)]="currentSelection"></app-custom-dropdown-list>
+	</div>
+	<div class="wrapper" *ngIf="currentSelection == 1 || currentSelection == 2">
+		<app-country-details [countryList]="countryList"></app-country-details>
+	</div>
+</div>
+

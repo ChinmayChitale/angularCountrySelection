@@ -1,0 +1,11 @@
+
+    <div class="form-group d-inline-block" ngbDropdown>
+        <select name="region" (change)="setCurrentSelection($event)">
+            <option (change)="$event.stopPropagation()"> Select </option>
+            <option *ngFor="let region of regionList" 
+                [value]="region.id"
+                >
+                {{region.name}}                       
+            </option>                    
+        </select>
+    </div>
