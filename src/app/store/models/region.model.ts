@@ -1,11 +1,4 @@
-
-export interface regions {
-    name:string,
-    id:number,
-    countries:countries[]
-  }
-
-export interface countries {
-    id:number,
-    name:string
-  }
+export interface Region {
+  name:string,
+  id:number
+}

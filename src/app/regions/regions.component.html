@@ -2,7 +2,7 @@
 <div class="container">
 	<label>Select Region</label>
 	<div class="wrapper">
-		<app-custom-dropdown-list [regionList]="regionList" [(currentSelection)]="currentSelection"></app-custom-dropdown-list>
+		<app-custom-dropdown-list [regionList]="regions$ | async" [(currentSelection)]="currentSelection"></app-custom-dropdown-list>
 	</div>
 	<div class="wrapper" *ngIf="currentSelection == 1 || currentSelection == 2">
 		<app-country-details [countryList]="countryList"></app-country-details>

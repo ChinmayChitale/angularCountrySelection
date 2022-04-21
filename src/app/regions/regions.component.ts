@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { GetCountriesService } from '../get-countries.service';
+import { RegionStore } from '../store/region.store';
 
 @Component({
   selector: 'app-regions',
   templateUrl: './regions.component.html',
-  styleUrls: ['./regions.component.scss']
+  styleUrls: ['./regions.component.scss'],
+  providers:[RegionStore]
 })
 export class RegionsComponent implements OnInit {
 
-  regionList = [
-    {name:'Asia',id:1},
-    {name:'Europe',id:2}
-  ];
+  regions$ = this.regionsStore.regions$;
 
-  currentSelection = {};
+  public currentSelection = {};
 
   public countryList:any = {};
 
   constructor(
-    private apiService:GetCountriesService
+    private apiService:GetCountriesService,
+    private regionsStore:RegionStore
 ) {}
 
   ngOnInit(): void { }
